@@ -68,6 +68,7 @@ body{
 header{
 height: 40px;
 background-color: #0f0f0f;
+width: 100%;
 
 }
 
@@ -86,9 +87,16 @@ nav ul{
     font-size: 1.25rem;
 }
 
-nav ul li  a {
+nav ul li:hover{
+    text-shadow: #ffffff 0 0 10px;
+    transition: 0.5s;
+}
+
+nav ul li a {
     color: antiquewhite;
     text-decoration: none;
+
+
 }
 
 /* --------------MAIN-------------- */
@@ -98,6 +106,9 @@ main{
     text-align: center;
 }
 
+span{
+    color: maroon;
+}
 
 h1{
     font-family: 'Work Sans', sans-serif; 
@@ -164,8 +175,95 @@ footer{
 }
 
 @media(max-width: 768px){
-    footer{
+    #main_footer{
         background-color: antiquewhite;
         color:#0f0f0f;
+    }
+}
+
+/* ------------CONTACT PAGE---------- */
+
+.container{
+    background-color: antiquewhite;
+    height: 650px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* ---------------PROJECTS PAGE------------ */
+#projects-header{
+text-align: center;
+margin: 40px;
+}
+
+.card{
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 80px;
+}
+
+.content{
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+/* .content-opposite{
+    display: flex;
+    gap: 2rem;
+    flex-direction: row-reverse;
+    margin-top: 20px;
+} */
+
+.card img{
+    height: 250px;
+}
+
+.projects-container{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+
+.made_with{
+    text-align: center;
+    background-color: #0f0f0f;
+    color: antiquewhite;
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 0px;
+    width: 350px;
+    border-radius: 1rem;
+}
+
+.btn{
+    width: 350px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+.made_with p{
+    margin-bottom: 5px;
+}
+
+@media(max-width: 768px){
+    .card{
+        text-align: center;
+    }
+    .content{
+        flex-direction: column-reverse;
+    }
+    .card img{
+        align-self: center;
+    }
+    .made_with{
+        margin: 10px auto;
     }
 }
